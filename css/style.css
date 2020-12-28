@@ -1,0 +1,188 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* css variables */
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    --transition-gen: all .6s;
+}
+
+/* general styles */
+a,
+input,
+span,
+button {
+    display: inline-block;
+}
+a { 
+    text-decoration: none;
+}
+button {
+    border: none;
+}
+li {
+    list-style: none;
+}
+
+/* container */
+.container {
+    width: 95%;
+    max-width: var(--breakpoint-xl);
+    margin: 0 auto;
+}
+
+
+/* ================ Header contact information and navbar ================ */
+.header  {
+    background: url("https://images.unsplash.com/reserve/7VRjBuoQRG6b0U7sIqjk_ConstructionNight_wide2.jpg?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 800px;
+}
+
+.header .header__container {
+    border-bottom: 1px solid var(--indigo);
+}
+.header .header__text-box {
+    padding: 10% 0;
+}
+.header .header__title {
+    position: relative;
+    font-size: 7rem;
+}
+.header .header__title-sub {
+    position: absolute;
+    top: 6rem;
+    left: 5rem;
+}
+
+
+/* services */
+.services {
+    margin-top: 10rem;
+}
+.services .services__card {
+    overflow: hidden;
+}
+.services .services__card-img {
+    background: url("https://preview.colorlib.com/theme/constructioncompany/assets/img/service/servicess1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: var(--transition-gen);
+    height: 300px;
+}
+.services .services__card {
+    border-bottom: 2px solid var(--orange);
+}
+.services .services__card-title {
+    font-size: 1.4rem;  
+    transition: var(--transition-gen);
+}
+
+.services .services__card-title:hover {
+    color: var(--orange);
+}
+.services .services__card .fa-plus {
+    transition: var(--transition-gen);
+    padding: 0.6rem;
+}
+.services .services__card:hover .fa-plus{
+    background-color: var(--orange);
+    color: var(--light);
+}
+.services .services__card:hover .services__card-img {
+    transform: scale(1.1);
+}
+ 
+/* about us */
+.about-us {
+    margin-top: 10em;
+}
+.about-us .about-us__img {
+    background: url("https://preview.colorlib.com/theme/constructioncompany/assets/img/gallery/safe_in.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
+    width: 100%;
+}
+.about-us .about-us__text-box {
+    margin-left: 7rem;
+}
+.about-us .about-us__paragraph-container {
+    max-width: 70%;
+}
+
+
+
+/* media queries */
+@media(max-width: 1200px){
+    .container {
+        max-width: var(--breakpoint-lg);
+    }
+    .grid-column-lg-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 1000px){
+    .container {
+        max-width: var(--breakpoint-md);
+    }
+    .grid-column-md-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .grid-column-md-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media(max-width:750px){
+    .container {
+        max-width: var(--breakpoint-sm);
+    }
+    .grid-column-sm-1 {
+        grid-template-columns: 1fr;
+    }
+    .grid-column-sm-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(min-width: 576px){
+    .grid-column-xms-1{
+        grid-template-columns: 1fr;
+    }
+}
