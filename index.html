@@ -3,254 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/624ac199fb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/utilities.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Website for Construction Company</title>
+    
+    <title>Construction Company</title>
 </head>
 <body>
-    
-    <!-- header contact social and navbar -->
-    <header class="header">
-        <div class="bg--purple px-5 pt-1">
-            <div class="header__container flex flex--justify-content-between pt-1 pb-1">
-                <div class="header__contact-info flex text--white text-sz-0">
-                    <p>
-                        <span class="header__phone-number">
-                            +(123) 1234-567-8901
-                        </span>
-                    </p>
-                    <p class="px-2">
-                        <span class="header__email">
-                            info@domain.com
-                        </span>
-                    </p>
-                    <p>
-                        <span class="header__working-hours">
-                            Mon - Sat 8:00 - 17:30, Sunday - CLOSED
-                        </span>
-                    </p>
+   
+   <!-- header  -->
+   <header class="header">
+        <div class="header-bg-color">
+            <div class="header__container">
+                <div class="row flex flex--justify-content-between">
+                    <div class="header__info flex">
+                        <address class="header__contact-info pr-2">
+                            <span class="header__tel-num pr-2">
+                                +(123) 1234-567-890
+                            </span>
+                            <span class="header__email">
+                                info@domain.com
+                            </span>
+                        </address>
+                        <p>
+                            <time class="header__opening-time">
+                                Mon - Sat 8:00 - 17:30
+                            </time>
+                            Sunday - CLOSED
+                        </p>
+                    </div>
+                    <ul class="header__social flex">
+                        <li class="header__social-list-item">
+                            <a href="#" class="header__social-list-link">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="header__social-list-item">
+                            <a href="#" class="header__social-list-link">
+                                <i class="fa fa-facebook-f" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="header__social-list-item">
+                            <a href="#" class="header__social-list-link">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li class="header__social-list-item">
+                            <a href="#" class="header__social-list-link">
+                                <i class="fa fa-google-plus" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <ul class="header__list-social flex">
-                    <li class="header__list-social-item">
-                        <a href="#" class="header__list-social-link text--white">
-                            <i class="fa fa-twitter"></i>
-                        </a>
-                    </li>
-                    <li class="header__list-social-item pl-2">
-                        <a href="#" class="header__list-social-link text--white">
-                            <i class="fa fa-facebook"></i>
-                        </a>
-                    </li>
-                    <li class="header__list-social-item px-2">
-                        <a href="#" class="header__list-social-link text--white">
-                            <i class="fa fa-instagram"></i>
-                        </a>
-                    </li>
-                    <li class="header__list-social-item">
-                        <a href="#" class="header__list-social-link text--white">
-                            <i class="fa fa-google"></i>
+           </div>
+           <!-- navigation -->
+           <nav class="header__nav nav flex flex--justify-content-between flex--align-items-center">
+                <ul class="header__nav-list-logo nav__list-logo">
+                    <li class="header__nav-list-logo-item">
+                        <a href="#" class="header__nav-link-logo-link">
+                            <figure>
+                                <img src="https://preview.colorlib.com/theme/constructioncompany/assets/img/logo/logo.png" alt="logo of website">
+                            </figure>
                         </a>
                     </li>
                 </ul>
-            </div>
-             <nav class="header__nav nav py-1 flex flex--justify-content-between flex--align-items-center">
-                 <ul class="header__nav-logo nav__logo">
-                     <li class="header__nav-logo-item nav__logo-item">
-                         <a href="#" class="header__nav-logo-link nav__logo-link">
-                            <img src="https://preview.colorlib.com/theme/constructioncompany/assets/img/logo/logo.png" alt="site logo" class="header__logo">
-                         </a>
-                    </li>
-                 </ul>
-                 <ul class="header__nav-menu nav__menu flex flex--align-items-center">
-                     <li class="header__nav-menu-item nav__menu-item">
-                         <a href="#" class="header__nav-menu-link nav__menu-link text--white">
+    
+                <!-- nav menu -->
+                <ul class="header__nav-list-menu nav__list flex flex--align-items-center">
+                    <li class="header__nav-list-item nav__list-item">
+                        <a href="#" class="header__nav-list-link nav__list-link">
                             Home
-                         </a>
+                        </a>
                     </li>
-                     <li class="header__nav-menu-item nav__menu-item">
-                         <a href="#" class="header__nav-menu-link nav__menu-link text--white pl-2">
+                    <li class="header__nav-list-item nav__list-item">
+                        <a href="#" class="header__nav-list-link nav__list-link">
                             About
-                         </a>
+                        </a>
                     </li>
-                     <li class="header__nav-menu-item nav__menu-item">
-                         <a href="#" class="header__nav-menu-link nav__menu-link text--white pl-2">
+                    <li class="header__nav-list-item nav__list-item">
+                        <a href="#" class="header__nav-list-link nav__list-link">
                             Projects
-                         </a>
+                        </a>
                     </li>
-                     <li class="header__nav-menu-item nav__menu-item">
-                         <a href="#" class="header__nav-menu-link nav__menu-link text--white pl-2">
-                            Pages
-                         </a>
-                    </li>
-                     <li class="header__nav-menu-item nav__menu-item">
-                         <a href="#" class="header__nav-menu-link nav__menu-link text--white pl-2">
+                    <li class="header__nav-list-item nav__list-item">
+                        <a href="#" class="header__nav-list-link nav__list-link">
                             Services
-                         </a>
+                        </a>
                     </li>
-                     <li class="header__nav-menu-item nav__menu-item">
-                         <a href="#" class="header__nav-menu-link nav__menu-link text--white pl-2">
+                    <li class="header__nav-list-item nav__list-item">
+                        <a href="#" class="header__nav-list-link nav__list-link">
                             Blog
-                         </a>
+                        </a>
                     </li>
-                     <li class="header__nav-menu-item nav__menu-item">
-                         <a href="#" class="header__nav-menu-link nav__menu-link text--white pl-2 pr-5">
+                    <li class="header__nav-list-item nav__list-item">
+                        <a href="#" class="header__nav-list-link nav__list-link">
+                            Pages
+                        </a>
+                    </li>
+                    <li class="header__nav-list-item nav__list-item">
+                        <a href="#" class="header__nav-list-link nav__list-link">
                             Contact
-                         </a>
+                        </a>
                     </li>
-                    <a href="#" class="header__nav-btn btn--bg-orange btn text--white pl-5">
-                        See more
-                     </a>
-                 </ul>
-             </nav>
+                    <li class="header__nav-list-item nav__list-item ml-4">
+                        <a href="#" class="btn btn--bg-yellow text--white">
+                            Contact Now
+                        </a>
+                    </li>
+                </ul>
+           </nav>
         </div>
-         <!-- header text box -->
-             <div class="header__text-box container">
-                <span class="text--white">
-                    HAND WASH AND DETAILING SERVICE
-                </span>
-                <h1 class="header__title text--orange">
+        <div class="header__text-box">
+            <div class="container">
+                <a href="#" class="header__car-wash-details text--white line-before">
+                    HAND CAR WASH AND DETAILING SERVICES
+                </a>
+                <h1 class="header__title my-2">
                     ADVANCED
-                    <span class="header__title-sub">
+                    <span class="header__title-anim">
                         CONSTRUCTION
                     </span>
                 </h1>
-                <a href="#" class="text--white mt-5">
+                <a href="#" class="header__our-services text--white line-before">
                     OUR SERVICES
                 </a>
-             </div>
-    
-    </header>
-    <!-- services section -->
-    <section class="services">
-        <div class="container">  
-            <h1 class="services__title text--purple text-sz-4 mb-1">
-                OUR SERVICES
-            </h1>
-            <div class="grid grid-gap-2 grid-column-xl-3">
-                <div class="services__card card">
-                    <div class="services__card-img"></div>
-                    <div class="card__container p-2">
-                        <a href="#" class="mb-1 d--block ">
-                            <h2 class="services__card-title  text--indigo ">
-                                Engineering techniques & implementation
-                            </h2>
-                        </a>
-                        <a href="#" class="">
-                            Read More 
-                            <i class="fas fa-plus pl-1 d-inline-block"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="services__card card">
-                    <div class="services__card-img"></div>
-                    <div class="card__container p-2">
-                        <a href="#" class="mb-1 d--block ">
-                            <h2 class="services__card-title  text--indigo ">
-                                Engineering techniques & implementation
-                            </h2>
-                        </a>
-                        <a href="#" class="">
-                            Read More 
-                            <i class="fas fa-plus pl-1 d-inline-block"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="services__card card">
-                    <div class="services__card-img"></div>
-                    <div class="card__container p-2">
-                        <a href="#" class="mb-1 d--block ">
-                            <h2 class="services__card-title  text--indigo ">
-                                Engineering techniques & implementation
-                            </h2>
-                        </a>
-                        <a href="#" class="">
-                            Read More 
-                            <i class="fas fa-plus pl-1 d-inline-block"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-    </section>
-    <!-- about us section -->
-    <section class="about-us">
-        <div class="abous-us__container flex flex--justify-content-end ">
-            <div class="about-us__text-box px-2">
-                <h1 class="about-us__title text--purple text-sz-5 ">
-                    WHO WE ARE
-                </h1>
-               <div class="about-us__paragraph-container">
-                    <p class="about-us__paragraph text--purple my-4">
-                        Mollit anim laborum duis au dolor in voluptcate velit ess cillum dolore eu lore dsu quality mollit anim laborumuis au dolor in voluptate velit cillu.
-                    </p>
-                    <p class="about-us__paragraph text--gray">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos culpa debitis, velit labore dolorem id facilis hic, a, incidunt adipisci officiis modi quae ipsum minus veritatis! A libero provident saepe?
-                    </p>
-               </div>
-            </div>
-            <div class="about-us__img">
-
             </div>
         </div>
-    </section>
-    <!-- projects section -->
-    <section class="projects">
-        <div class="container">
-            <div class="projects__card"></div>
-            <div class="projects__card"></div>
-            <div class="projects__card"></div>
-            <div class="projects__card"></div>
-            <div class="projects__card"></div>
-            <div class="projects__card"></div>
-        </div>
-    </section>
-    <!-- chat section -->
-    <section class="chat">
-
-    </section>
-    <!-- team section -->
-    <section class="team">
+   </header>
+   <div class="bg--img"></div>
+   <!-- services -->
+   <section class="services">
        <div class="container">
-            <div class="team__card"></div>
-            <div class="team__card"></div>
-            <div class="team__card"></div>
+           <div class="row grid grid-gap-2 grid-column-xl-3 grid-column-md-2 grid-column-sm-1">
+                <article class="service"></article>
+                <article class="service"></article>
+                <article class="service"></article>
+           </div>
        </div>
-    </section>
-    <!-- reviews -->
-    <section class="reviews">
-        <div class="container">
+   </section>
+   <!-- about us -->
+   <section class="about-us">
+       
+           <div class="row flex flex--justify-content-end flex-column">
+               <article class="about-us__text-container">
 
-        </div>
-    </section>
-    <!-- blog section -->
-    <section class="blog">
-        <div class="container">
-            <div class="blog__card"></div>
-            <div class="blog__card"></div>
-        </div>
-    </section>
-    <!-- footer  -->
-    <footer class="footer">
-        <div class="container">
-            <figure class="footer__logo">
-                <figcaption>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, est! Voluptates veritatis accusamus tenetur sapiente inventore voluptas similique ea aut at quo
-                </figcaption>
-            </figure>
-            <nav class="footer__nav">
-                <h2 class="text--white">
-                    Quick Links
-                </h2>
-            </nav>
-            <div class="footer__contact-container">
-                <h2 class="text--white">
-                    Contact
-                </h2>
-            </div>
-            <div class="footer__email">
+               </article>
+               <div class="about-us__img"></div>
+           </div>
+        
+   </section>
+   <!-- our projects -->
+   <section class="projects">
+       <div class="container">
+           <div class="row grid grid-gap-2 grid-column-xl-3 grid-column-md-2  grid-column-sm-1">
+               <article class="project"></article>
+               <article class="project"></article>
+               <article class="project"></article>
+               <article class="project"></article>
+               <article class="project"></article>
+               <article class="project"></article>
+           </div>
+       </div>
+   </section>
+   <!-- our team -->
+   <section class="our-team">
+       <div class="container">
+           <div class="row grid grid-gap-2 grid-column-xl-3 grid-column-md-2 grid-column-sm-1">
+               <article class="our-team__card"></article>
+               <article class="our-team__card"></article>
+               <article class="our-team__card"></article>
+           </div>
+       </div>
+   </section>
+   <!-- latest news -->
+   <section class="latest-news">
+       <div class="container">
+           <div class="row grid grid-gap-2 grid-column-xl-2 grid-column-sm-1">
+               <article class="latest-news__card"></article>
+               <article class="latest-news__card"></article>
+           </div>
+       </div>
+   </section>
+   <!-- footer -->
+   <footer class="footer">
+       <div class="container">
+           <div class="row grid grid-gap-2 grid-column-xl-4 grid-column-md-2 grid-column-sm-1">
+               <div class="footer__container"></div>
+               <div class="footer__container "></div>
+                <div class="footer__container"></div>
                 
-            </div>
-        </div>
-    </footer>
+               <div class="footer__container"></div>
+           </div>
+       </div>
+   </footer>
 </body>
 </html>

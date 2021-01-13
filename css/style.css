@@ -1,14 +1,15 @@
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    line-height: 1.6;
-}
+ * {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+ }
+ 
+ body {
+     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     font-size: 16px;
+ }
 
-/* css variables */
+/* ======= CSS Variables ======== */
 :root {
     --blue: #007bff;
     --indigo: #6610f2;
@@ -31,6 +32,11 @@ body {
     --danger: #dc3545;
     --light: #f8f9fa;
     --dark: #343a40;
+    --title-color: #0e132a;
+    --secondary-color: #161e46;
+    --text-light-gray: #a4acc3;
+    --text-medium-gray: #9fa6bd;
+    --text-dark-gray: #868c98;
     --breakpoint-xs: 0;
     --breakpoint-sm: 576px;
     --breakpoint-md: 768px;
@@ -38,151 +44,232 @@ body {
     --breakpoint-xl: 1200px;
     --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
-    --transition-gen: all .6s;
 }
 
-/* general styles */
+/* ======= General Styles ======== */
 a,
-input,
 span,
-button {
+button,
+input {
     display: inline-block;
 }
-a { 
-    text-decoration: none;
-}
 button {
+    cursor: pointer;
+}
+button,
+fieldset {
     border: none;
+
 }
 li {
     list-style: none;
 }
+a {
+    text-decoration: none;
+}
 
-/* container */
+/* ===== Global container ====== */
 .container {
     width: 95%;
     max-width: var(--breakpoint-xl);
     margin: 0 auto;
 }
 
+/* ===== Btn ====== */
+.btn {
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 1rem 1.6rem;
+}
+.btn--bg-yellow {
+    background-color: var(--orange);
+}
 
-/* ================ Header contact information and navbar ================ */
-.header  {
-    background: url("https://images.unsplash.com/reserve/7VRjBuoQRG6b0U7sIqjk_ConstructionNight_wide2.jpg?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
-    background-size: cover;
+/* ====== Header and navbar */
+.header {
+    background-blend-mode: multiply;
+    background: url(/img/photo-1541888946425-d81bb19240f5.jpg), linear-gradient(to bottom left, #0e132a8f, var(--secondary-color));
     background-repeat: no-repeat;
-    height: 800px;
+    background-size: cover;
+    background-position: center center;
+    height: 950px;
+     
+}
+.header .header-bg-color {
+    background-blend-mode: multiply;
+    background-color: var(--title-color);
 }
 
+    /* ===== Header contact info and social media  ====== */
 .header .header__container {
-    border-bottom: 1px solid var(--indigo);
+    border-bottom: 1px solid var(--secondary-color);
+    color: var(--white);
 }
+.header .header__container .row {
+    padding: 1rem 4rem;
+}
+.header .header__contact-info {
+    font-style: normal;
+    font-size: 0.9rem;
+    font-weight: normal;
+}
+.header .header__social .header__social-list-item {
+    padding-right: 1.6rem;
+}
+.header .header__social .header__social-list-link {
+    color: var(--white);
+}
+
+    /* ==== Header menu btn and logo ===== */
+.header .header__nav {
+    padding: 1.7rem 4rem;
+}
+.header .header__nav .header__nav-list-link {
+    color: var(--white);
+    padding-right: 1.8rem;
+}
+
+    /* ===== Header title ===== */
 .header .header__text-box {
-    padding: 10% 0;
+    padding-top: 15%;
 }
 .header .header__title {
-    position: relative;
-    font-size: 7rem;
+    font-size: clamp(4rem, calc(10vw + 1rem), 12rem);
+    color: #ff5f13;
+    line-height: 0.7;
 }
-.header .header__title-sub {
-    position: absolute;
-    top: 6rem;
-    left: 5rem;
+.header .header__title-anim {
+    margin-left: clamp(2rem, calc(10vw + 1rem), 9rem);
 }
-
-
-/* services */
-.services {
-    margin-top: 10rem;
-}
-.services .services__card {
-    overflow: hidden;
-}
-.services .services__card-img {
-    background: url("https://preview.colorlib.com/theme/constructioncompany/assets/img/service/servicess1.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    transition: var(--transition-gen);
-    height: 300px;
-}
-.services .services__card {
-    border-bottom: 2px solid var(--orange);
-}
-.services .services__card-title {
-    font-size: 1.4rem;  
-    transition: var(--transition-gen);
+.header .line-before::before {
+    display: inline-block;
+    content: "";
+    width: 2rem;
+    height: 3px;
+    vertical-align: middle;
+    background-color: #ff5f13;
 }
 
-.services .services__card-title:hover {
-    color: var(--orange);
+/* ===== Services section ====== */
+.services .service {
+    background-color: darkblue;
+    padding: 5rem;
+    margin-bottom: 5rem;
 }
-.services .services__card .fa-plus {
-    transition: var(--transition-gen);
-    padding: 0.6rem;
+
+/* ====== About us section ======= */
+.about-us .about-us__text-container, .about-us__img {
+    background-color: darkred;
+    margin-right: 1rem;
+    margin-bottom: 5rem;
+    padding: 5rem;
+    
 }
-.services .services__card:hover .fa-plus{
-    background-color: var(--orange);
-    color: var(--light);
-}
-.services .services__card:hover .services__card-img {
-    transform: scale(1.1);
-}
- 
-/* about us */
-.about-us {
-    margin-top: 10em;
+.about-us .about-us__text-container {
+    flex-basis: 40%;
+    margin-left: 11rem;
 }
 .about-us .about-us__img {
-    background: url("https://preview.colorlib.com/theme/constructioncompany/assets/img/gallery/safe_in.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 600px;
-    width: 100%;
-}
-.about-us .about-us__text-box {
-    margin-left: 7rem;
-}
-.about-us .about-us__paragraph-container {
-    max-width: 70%;
+    flex-basis: 60%;
 }
 
 
+/* ===== Projects ========= */
+.projects .project {
+    padding: 6rem;
+    background-color: darkviolet;
+     
+}
 
-/* media queries */
-@media(max-width: 1200px){
+/* ====== Our tem ======== */
+.our-team .our-team__card {
+    margin-top: 6rem;
+    padding: 6rem;
+    background-color: dodgerblue;
+}
+
+/* ======= Latest News ========= */
+.latest-news .latest-news__card {
+    margin-top: 6rem;
+    padding: 6rem;
+    background-color: darkorange;
+}
+
+
+/* ========= Foooter ========== */
+.footer .footer__container {
+    margin-top: 6rem;
+    padding: 6rem;
+    background-color: darkviolet;
+
+}
+ 
+
+/* ===== media queries ===== */
+
+@media(max-width: 1200px) {
     .container {
         max-width: var(--breakpoint-lg);
     }
-    .grid-column-lg-2 {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
 
-@media(max-width: 1000px){
+@media(max-width: 990px){
     .container {
         max-width: var(--breakpoint-md);
     }
     .grid-column-md-2 {
         grid-template-columns: repeat(2, 1fr);
     }
-    .grid-column-md-3 {
-        grid-template-columns: repeat(3, 1fr);
+    .flex-column {
+        flex-direction: column;
     }
 }
-@media(max-width:750px){
+
+@media(max-width: 770px){
     .container {
         max-width: var(--breakpoint-sm);
     }
     .grid-column-sm-1 {
         grid-template-columns: 1fr;
     }
-    .grid-column-sm-2 {
-        grid-template-columns: repeat(2, 1fr);
+}
+
+@media(max-width: 580px) {
+    .grid-column-xsm-1 {
+        grid-template-columns: 1fr;;
     }
 }
 
-@media(min-width: 576px){
-    .grid-column-xms-1{
-        grid-template-columns: 1fr;
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* h1 {
+    -webkit-text-stroke: 1px #fff;
+    -webkit-text-fill-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 8rem;
+    font-weight: 100;
+    line-height: 1;
+    color: #fff;
+    letter-spacing: 19px;
+     
+ } */
+ 
