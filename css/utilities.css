@@ -233,10 +233,11 @@
 .p-5 {
     padding: 5rem;
 }
+/* ======= CSS Variables ======== */
 :root {
     --blue: #007bff;
     --indigo: #6610f2;
-    --purple: #330e778a;
+    --purple: #6f42c1;
     --pink: #e83e8c;
     --red: #dc3545;
     --orange: #fd7e14;
@@ -255,8 +256,20 @@
     --danger: #dc3545;
     --light: #f8f9fa;
     --dark: #343a40;
+    --title-color: #0e132a;
+    --secondary-color: #161e46;
+    --text-light-gray: #a4acc3;
+    --text-medium-gray: #9fa6bd;
+    --text-dark-gray: #868c98;
+    --transition-services: all .5s;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 }
-
 /* ============== Colors ============== */
     /* background colours */
 .bg--blue {
@@ -330,6 +343,9 @@
 }
 .text--indigo {
     color: var(--indigo);
+}
+.text--dark-title {
+    color: var(--secondary-color);
 }
 .text--purple {
     color: var(--purple);
@@ -583,6 +599,11 @@
 .flex--wrap-reverse {
     flex-wrap: wrap-reverse;
 }
+    /* flex column */
+.flex--direction-column {
+    flex-direction: column;
+}
+
 
     /* flex grow */
 .flex--grow-1{

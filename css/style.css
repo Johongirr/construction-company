@@ -9,42 +9,7 @@
      font-size: 16px;
  }
 
-/* ======= CSS Variables ======== */
-:root {
-    --blue: #007bff;
-    --indigo: #6610f2;
-    --purple: #6f42c1;
-    --pink: #e83e8c;
-    --red: #dc3545;
-    --orange: #fd7e14;
-    --yellow: #ffc107;
-    --green: #28a745;
-    --teal: #20c997;
-    --cyan: #17a2b8;
-    --white: #fff;
-    --gray: #6c757d;
-    --gray-dark: #343a40;
-    --primary: #007bff;
-    --secondary: #6c757d;
-    --success: #28a745;
-    --info: #17a2b8;
-    --warning: #ffc107;
-    --danger: #dc3545;
-    --light: #f8f9fa;
-    --dark: #343a40;
-    --title-color: #0e132a;
-    --secondary-color: #161e46;
-    --text-light-gray: #a4acc3;
-    --text-medium-gray: #9fa6bd;
-    --text-dark-gray: #868c98;
-    --breakpoint-xs: 0;
-    --breakpoint-sm: 576px;
-    --breakpoint-md: 768px;
-    --breakpoint-lg: 992px;
-    --breakpoint-xl: 1200px;
-    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
-}
+
 
 /* ======= General Styles ======== */
 a,
@@ -66,6 +31,10 @@ li {
 }
 a {
     text-decoration: none;
+    transition: all 0.5s;
+}
+img {
+    width: 100%;
 }
 
 /* ===== Global container ====== */
@@ -83,6 +52,26 @@ a {
 }
 .btn--bg-yellow {
     background-color: var(--orange);
+}
+/* ===== fron and back text */
+.text-container {
+    position: relative;
+}
+.front-text {
+    font-size: 4.5rem;
+    color: var(--title-color);
+    z-index: 1;
+}
+.back-text {
+    position: absolute;
+    bottom: 0;
+    left: 2;
+    -webkit-text-stroke: 1px var(--light);
+    -webkit-text-fill-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+    font-size: clamp(5rem, calc(10vw + 1rem), 10rem);
+    font-weight: 900;
+    z-index: -1;
 }
 
 /* ====== Header and navbar */
@@ -134,12 +123,16 @@ a {
     padding-top: 15%;
 }
 .header .header__title {
-    font-size: clamp(4rem, calc(10vw + 1rem), 12rem);
+    font-size: clamp(4rem, calc(10vw + 1rem), 9rem);
     color: #ff5f13;
     line-height: 0.7;
 }
 .header .header__title-anim {
     margin-left: clamp(2rem, calc(10vw + 1rem), 9rem);
+    -webkit-text-stroke: 1px #fff;
+    -webkit-text-fill-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+     
 }
 .header .line-before::before {
     display: inline-block;
@@ -151,30 +144,110 @@ a {
 }
 
 /* ===== Services section ====== */
-.services .service {
-    background-color: darkblue;
-    padding: 5rem;
-    margin-bottom: 5rem;
-}
-
-/* ====== About us section ======= */
-.about-us .about-us__text-container, .about-us__img {
-    background-color: darkred;
-    margin-right: 1rem;
-    margin-bottom: 5rem;
-    padding: 5rem;
+.services{
+    margin-top: 12rem;
+    line-height: 0.7;
     
 }
+.services .services__service {
+    border-bottom: 4px solid var(--orange);
+}
+.services .services__service-img-container {
+    overflow: hidden;
+}
+.services .services__service-img {
+    transition: var(--transition-services);
+}
+.services .services__service:hover .services__service-img {
+    transform: scale(1.1);
+}
+
+.services .services__service-text-box {
+    padding: 1.5rem 1.7rem;
+    background-color: var(--light);
+    line-height: 1;
+}
+.services .services__service-link {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--title-color);
+    margin-bottom: 1.8rem;
+}
+.services .services__service-link:hover {
+    color: var(--orange);
+}
+.services .services__service-read-more {
+    color: var(--secondary-color);
+    font-weight: 100;
+    margin-right: 1.1rem;
+}
+.services .fa-plus {
+    font-size: 1.5rem;
+    padding-left: 1rem;  
+    transition: var(--transition-services);
+    padding: 0.5rem 0.8rem;
+    margin-left: 1rem;
+}
+.services .services__service:hover .fa-plus{
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+
+/* ====== About us section ======= */
+.about-us {
+    margin-top: 12rem;
+}
+.about-us .about-us__title{
+    font-size: clamp(4rem, calc(5vw + 1rem), 6rem);
+    letter-spacing: -2px;
+}
+.about-us .back-text {
+    font-size: clamp(6rem, calc(6vw + 1rem), 8rem);
+}
+ 
+.about-us .about-us__text-box {
+    padding-right: 7rem;
+    font-size: 1.1rem;
+}
 .about-us .about-us__text-container {
-    flex-basis: 40%;
+    flex-basis: 45%;
     margin-left: 11rem;
 }
+.about-us .about-us__text-box .btn--bg-yellow {
+    padding: 1.2rem 2rem;
+    color: var(--white);
+}
+
 .about-us .about-us__img {
-    flex-basis: 60%;
+    position: relative;
+    background: url(/img/safe_in.webp);
+    flex-basis: 55%;
+    height: 550px;
+}
+.about-us .about-us__date-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--title-color);
+    width: 11rem;
+    height: 13.3rem;
+    border-radius: 5px;
+    color: var(--white);
+}
+.about-us .about-us__date {
+    font-size: 3.5rem;
+}
+.about-us .about-us__date-text {
+    letter-spacing: 6px;
+    font-size: 1.2rem;
 }
 
 
 /* ===== Projects ========= */
+.projects {
+    margin-top: 12rem;
+}
 .projects .project {
     padding: 6rem;
     background-color: darkviolet;
