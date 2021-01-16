@@ -1,4 +1,6 @@
- * {
+ *,
+ *::before,
+ *::after {
      padding: 0;
      margin: 0;
      box-sizing: border-box;
@@ -31,10 +33,11 @@ li {
 }
 a {
     text-decoration: none;
-    transition: all 0.5s;
+    transition: all .5s;
 }
 img {
     width: 100%;
+    transition: all .5s;
 }
 
 /* ===== Global container ====== */
@@ -71,6 +74,7 @@ img {
     -webkit-tap-highlight-color: transparent;
     font-size: clamp(5rem, calc(10vw + 1rem), 10rem);
     font-weight: 900;
+    line-height: 1;
     z-index: -1;
 }
 
@@ -248,26 +252,173 @@ img {
 .projects {
     margin-top: 12rem;
 }
-.projects .project {
-    padding: 6rem;
-    background-color: darkviolet;
-     
+.projects .back-text {
+    bottom: 3.2rem;     
+}
+.projects .projects__menu-link {
+    padding-right: 1.6rem;
+    color: #212529;
+    font-size: 1.1rem;
+}
+.projects .active {
+    color: var(--orange);
+}
+.projects .projects__project {
+    line-height: .7;
+    
+}
+.projects .projects__img-container {
+    position: relative;
+}
+.projects .projects__img-link {
+    position: absolute;
+    bottom: -1rem;
+    right: 1rem;
+    padding: .5rem .8rem;
+    background-color: var(--orange);
+    color: var(--white);
+    font-size: 1.2rem;
+    opacity: 0;
+    
+
+}
+.projects .projects__text-box {
+    padding: 1.5rem;
+    background-color: var(--light);
+    line-height: normal;
+    transition: background-color .5s;
+}
+.projects .projects__project-link {
+    font-size: 2rem;
+    color: var(--title-color);
+}
+.projects .projects__project:hover .projects__text-box {
+    background-color: var(--title-color);
+}
+.projects .projects__project:hover .projects__project-link {
+    color: var(--white);
+}
+.projects .projects__project:hover .projects__img-link {
+    opacity: 1;
+}
+
+/* ====== Chat with us ======= */
+.chat-with-us {
+    position: relative;
+    margin-top: 12rem;
+    padding: 10rem 15rem;
+    background-blend-mode: multiply;
+    background: url(/img/photo-1509856424994-49cd0290098b.jpg);
+    background-color:#111;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 700px;
+    color: var(--white);
+}
+.chat-with-us .chat-with-us__title {
+    color: var(--white);
+    z-index: 99999;
+}
+.chat-with-us .back-text {
+    top: -4.2rem;
+    left: 2rem;
+    z-index: 0;
+}
+.chat-with-us .chat-with-us__paragraph {
+    font-size: 1.1rem;
+}
+.chat-with-us .chat-with-us__card {
+    position: absolute;
+    padding: 4rem 0;
+    width: 90%;
+    max-width: 1160px;
+    margin: 0 auto;
+    bottom: -5rem;
+    left: 0;
+    right: 0;
+    background-color: var(--orange);
+    color: var(--white);
+}
+.chat-with-us .chat-with-us__amount {
+    font-size: 3.5rem;
+    align-self: end;
+    margin-right: 1.2rem;
+}
+.chat-with-us .chat-with-us__amount-paragraph-2 {
+    font-size: 2rem;
 }
 
 /* ====== Our tem ======== */
-.our-team .our-team__card {
-    margin-top: 6rem;
-    padding: 6rem;
-    background-color: dodgerblue;
+.our-team {
+    margin-top: 15rem;
 }
+.our-team .our-team__job-title {
+    display: block;
+    color: var(--orange);
+    margin-left: 0rem;
+
+}
+.our-team .our-team__job-title::before { 
+    display: inline-block;
+    content: "";
+    width: 1.6rem;
+    height: 3px;
+    vertical-align: middle;
+    background-color: #ff5f13;
+}
+.our-team .our-team__member-name {
+    color: var(--title-color);
+    margin-top: .5rem;
+    font-size: 1.5rem;
+}
+.our-team .our-team__img-container {
+    overflow: hidden;
+    line-height: 0;
+}
+.our-team .our-team__card:hover .our-team__img {
+    transform: scale(1.1);
+}
+
+ 
+
 
 /* ======= Latest News ========= */
-.latest-news .latest-news__card {
-    margin-top: 6rem;
-    padding: 6rem;
-    background-color: darkorange;
+.latest-news {
+    margin-top: 12rem;
 }
-
+.latest-news .latest-news__img-container {
+    position: relative;
+}
+.latest-news .latest__news-date {
+    position: absolute;
+    top:0;
+    left: 0;
+    background-color: var(--orange);
+    padding: 1.4rem 2.5rem;
+    color: var(--white);
+}
+.latest-news .latest__news-date-num {
+    font-size: 1.3rem;
+}
+.latest-news .latest-news__text-box {
+    background-color: #00235b;
+    padding: 2rem 3.4rem;
+}
+.latest-news .latest__news-link {
+    font-size: 1.6rem;
+    margin: .8rem 0;
+}
+.latest-news .latest__news-link:hover {
+    color: var(--orange);
+}
+.latest-news .latest__news-read-more {
+    font-size: 1.3rem;
+    text-decoration: underline #642102 1px;
+    text-underline-offset: 5px; 
+}
+.latest-news .latest__news-read-more:hover {
+    text-decoration-color: var(--orange);
+}
 
 /* ========= Foooter ========== */
 .footer .footer__container {
