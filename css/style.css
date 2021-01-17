@@ -246,7 +246,11 @@ img {
 
 .about-us .about-us__img {
     position: relative;
+<<<<<<< HEAD
     background: url("img/safe_in.webp");
+=======
+    background: url(img/safe_in.webp);
+>>>>>>> 04cf9b750885ec4cc8dd91525335f06446e39306
     background-size: cover;
     background-repeat: no-repeat; 
     background-position: center;
