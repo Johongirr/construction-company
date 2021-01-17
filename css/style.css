@@ -84,7 +84,7 @@ img {
 /* ====== Header and navbar */
 .header {
     background-blend-mode: multiply;
-    background: url(img/photo-1541888946425-d81bb19240f5.jpg), linear-gradient(to bottom left, #0e132a8f, var(--secondary-color));
+    background: url("/img/photo-1541888946425-d81bb19240f5.jpg"), linear-gradient(to bottom left, #0e132a8f, var(--secondary-color));
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
