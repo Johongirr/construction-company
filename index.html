@@ -62,7 +62,7 @@
                     <li class="header__nav-list-logo-item">
                         <a href="#" class="header__nav-link-logo-link">
                             <figure>
-                                <img src="https://preview.colorlib.com/theme/constructioncompany/assets/img/logo/logo.png" alt="logo of website">
+                                <img src="https://preview.colorlib.com/theme/constructioncompany/assets/img/logo/logo.png" alt="logo of website" class="header__logo-img">
                             </figure>
                         </a>
                     </li>
@@ -110,7 +110,13 @@
                             Contact Now
                         </a>
                     </li>
+                   
                 </ul>
+                <div class="hamburger-menu">
+                    <div class="hamburger-item"></div>
+                    <div class="hamburger-item"></div>
+                    <div class="hamburger-item"></div>
+                </div>
            </nav>
         </div>
         <div class="header__text-box">
@@ -190,8 +196,8 @@
    </section>
    <!-- about us -->
    <section class="about-us">
-           <div class="row flex flex--justify-content-end flex-column">
-               <article class="about-us__text-container">
+           <div class="row flex flex-wrap flex-gap-1">
+               <article class="about-us__text-container mb-3">
                         <div class="text-container">
                             <h2 class="about-us__title front-text mb-4">
                                 WHO WE ARE
@@ -213,6 +219,7 @@
                         </div>
                </article>
                
+                
                <div class="about-us__img">
                    <div class="about-us__date-container flex  flex--direction-column flex--justify-content-center flex--align-items-center">
                        <time class="about-us__date text-sz d--block">
@@ -229,16 +236,16 @@
    <!-- our projects -->
    <section class="projects">
        <div class="container">
-        <div class="row flex flex--justify-content-between flex--align-items-baseline">
+        <div class="row flex flex--justify-content-between flex--align-items-baseline flex-wrap">
             <div class="text-container">
-                <h2 class="projects__title front-text mb-4">
+                <h2 class="projects__title front-text mt-1">
                     OUR PROJECTS
                 </h2> 
                 <span class="back-text">
                     GALLERY
                 </span> 
             </div>
-            <ul class="projects__menu flex">
+            <ul class="projects__menu flex flex-wrap">
                 <li class="projects__menu-list">
                     <a href="#" class="projects__menu-link active">
                         Show All
@@ -266,7 +273,7 @@
                 </li>
             </ul>
         </div>
-           <div class="row grid grid-gap-2 grid-column-xl-3 grid-column-md-2  grid-column-sm-1">
+           <div class="row grid grid-gap-2 grid-column-xl-3 grid-column-md-2  grid-column-sm-1 mt-4">
             <article class="projects__project project">
                 <figure class="projects__img-container"> 
                      <img src="img/project1.webp" alt="picture of constructed building by company" class="projects__img">
@@ -363,17 +370,19 @@
                 </h2> 
                 <span class="back-text">
                     LET'S CHAT
-                </span> 
+                </span>
+            </div>
+            <div class="chat-with-us__text-box ml-5">
                 <p class="chat-with-us__paragraph">
                     Mollit anim laborum.Dvcuis aute iruxvfg dhjkolohr in re voluptate velit esscillumlore eu quife nrulla parihatur. Excghcepteur sfwsignjnt occa cupidatat non aute iruxvfg dhjinulpadeserunt mollitemnth incididbnt ut;o5tu layjobore mofllit anim.
                 </p>
-                <button class="btn btn--bg-white mt-2">
+                <button class="btn btn--bg-white my-3">
                     Read More
                 </button>
             </div>
             <div class="chat-with-us__card card">
-                <div class="row flex flex--justify-content-around flex--align-items-center">
-                    <div class="chat-with-us__stat flex">
+                <div class="row flex flex-wrap-sm flex-gap-2">
+                    <div class="chat-with-us__stat flex flex--justify-content-center">
                         <output class="chat-with-us__amount">
                             34
                         </output>
@@ -386,7 +395,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="chat-with-us__stat flex">
+                    <div class="chat-with-us__stat flex flex--justify-content-center">
                         <output class="chat-with-us__amount">
                             34
                         </output>
@@ -399,7 +408,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="chat-with-us__stat flex">
+                    <div class="chat-with-us__stat flex flex--justify-content-center">
                         <output class="chat-with-us__amount">
                             34
                         </output>
@@ -533,12 +542,80 @@
    <footer class="footer">
        <div class="container">
            <div class="row grid grid-gap-2 grid-column-xl-4 grid-column-md-2 grid-column-sm-1">
-               <div class="footer__container"></div>
-               <div class="footer__container "></div>
-                <div class="footer__container"></div>
+               <div class="footer__container">
+                   <a href="#" class="footer__logo-link mb-2">
+                       <img src="/img/logo2_footer.webp" alt="logo of the website">
+                   </a>
+                   <p class="footer__paragraph">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore.
+                   </p>
+               </div>
+               <div class="footer__container">
+                   <h4 class="footer__title mb-2">
+                       Quick Links 
+                   </h4>
+                   <ul class="footer__menu-list">
+                       <li class="footer__menu-item">
+                           <a href="#" class="footer__menu-link">
+                                About
+                           </a>
+                        </li>
+                       <li class="footer__menu-item">
+                           <a href="#" class="footer__menu-link">
+                                Services
+                           </a>
+                        </li>
+                       <li class="footer__menu-item">
+                           <a href="#" class="footer__menu-link">
+                                Projects
+                           </a>
+                        </li>
+                       <li class="footer__menu-item">
+                           <a href="#" class="footer__menu-link">
+                                Contact us
+                           </a>
+                        </li>
+                   </ul>
+               </div>
+                <div class="footer__container">
+                    <h4 class="footer__title mb-2">
+                        Contact
+                    </h4>
+                    <address class="footer__contact-info">
+                        <p class="footer__address">
+                            98 West 21th Street, Suite 721 New York,NY 10010
+                        </p>
+                        <ul class="footer__address-list">
+                            <li class="footer__address-item">
+                                <a href="#" class="footer__address-link">
+                                    Phone: +95 (0) 123 456 789
+                                </a>
+                            </li>
+                            <li class="footer__address-item">
+                                <a href="#" class="footer__address-link">
+                                    Cell: +95 (0) 123 456 789
+                                </a>
+                            </li>
+                        </ul>
+                    </address>
+                </div>
                 
-               <div class="footer__container"></div>
+               <div class="footer__container">
+                   <form action="#" class="footer__form">
+                       <div class="form__control flex">
+                           <input type="email" class="footer__input" placeholder="Email Address" required>
+                           <button class="btn btn--bg-dark-blue">SIGN UP</button>
+                       </div>
+                   </form>
+                   <div class="footer__bg-img"></div>
+               </div>
            </div>
+           <small class="footer__copyright">
+                Copyright ©2021 All rights reserved | This template is made with <span class="heart">&hearts;</span>  by 
+                <a href="#" class="footer__colorlib-link">
+                    Colorlib
+                </a>
+           </small>
        </div>
    </footer>
 </body>
