@@ -84,7 +84,7 @@ img {
 /* ====== Header and navbar */
 .header {
     background-blend-mode: multiply;
-    background: url(/img/photo-1541888946425-d81bb19240f5.jpg), linear-gradient(to bottom left, #0e132a8f, var(--secondary-color));
+    background: url(img/photo-1541888946425-d81bb19240f5.jpg), linear-gradient(to bottom left, #0e132a8f, var(--secondary-color));
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -246,7 +246,7 @@ img {
 
 .about-us .about-us__img {
     position: relative;
-    background: url(/img/safe_in.webp);
+    background: url(img/safe_in.webp);
     background-size: cover;
     background-repeat: no-repeat; 
     background-position: center;
@@ -331,7 +331,7 @@ img {
     margin-top: 12rem;
     padding: 8rem 0;
     background-blend-mode: multiply;
-    background: url(/img/photo-1509856424994-49cd0290098b.jpg);
+    background: url(img/photo-1509856424994-49cd0290098b.jpg);
     background-color:#111;
     background-size: cover;
     background-repeat: no-repeat;
